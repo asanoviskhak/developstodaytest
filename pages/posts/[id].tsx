@@ -54,14 +54,7 @@ const PostText = styled.p`
     font-size: 14px;
 `
 
-interface PostDetailsProps{
-    id: number,
-    title: string,
-    body: string,
-    comments?: any
-}
-
-export default function Post({data}) {
+export default function Post({data}:any) {
     
     if (!data) "Loading..."
     

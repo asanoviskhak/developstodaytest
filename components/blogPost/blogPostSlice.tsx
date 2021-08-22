@@ -28,7 +28,7 @@ export const addPost = (
     }
     const post = JSON.stringify({ "title": title?title:"", "body": body?body:"" })
     
-    const {data} : BlogPost = await axios.post("https://simple-blog-api.crew.red/posts", post, options)
+    const {data} = await axios.post("https://simple-blog-api.crew.red/posts", post, options)
     console.log(data)
     dispatch(postSlice.actions.addPost(data))
 }
